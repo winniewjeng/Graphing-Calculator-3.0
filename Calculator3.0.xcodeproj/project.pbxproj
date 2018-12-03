@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2D9E8BD521B5B9CE0034DFE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BD421B5B9CE0034DFE9 /* main.cpp */; };
+		2D9E8BE221B5BBD00034DFE9 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BDE21B5BBCF0034DFE9 /* sfml-system.framework */; };
+		2D9E8BE321B5BBD00034DFE9 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BDF21B5BBCF0034DFE9 /* sfml-window.framework */; };
+		2D9E8BE421B5BBD00034DFE9 /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BE021B5BBCF0034DFE9 /* SFML.framework */; };
+		2D9E8BE521B5BBD00034DFE9 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BE121B5BBCF0034DFE9 /* sfml-graphics.framework */; };
+		2D9E8BF821B5BC6F0034DFE9 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */; };
+		2D9E8BF921B5BC6F0034DFE9 /* Sidebar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */; };
+		2D9E8BFA21B5BC6F0034DFE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BE921B5BC6D0034DFE9 /* main.cpp */; };
+		2D9E8BFB21B5BC6F0034DFE9 /* Interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */; };
+		2D9E8BFC21B5BC6F0034DFE9 /* ShuntingYard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,29 @@
 /* Begin PBXFileReference section */
 		2D9E8BD121B5B9CE0034DFE9 /* Calculator3.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Calculator3.0; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9E8BD421B5B9CE0034DFE9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2D9E8BDC21B5BBA80034DFE9 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../../../Library/Frameworks; sourceTree = "<group>"; };
+		2D9E8BDE21B5BBCF0034DFE9 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		2D9E8BDF21B5BBCF0034DFE9 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		2D9E8BE021B5BBCF0034DFE9 /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
+		2D9E8BE121B5BBCF0034DFE9 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
+		2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sidebar.cpp; sourceTree = "<group>"; };
+		2D9E8BE921B5BC6D0034DFE9 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2D9E8BEA21B5BC6D0034DFE9 /* Operand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Operand.hpp; sourceTree = "<group>"; };
+		2D9E8BEB21B5BC6D0034DFE9 /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		2D9E8BEC21B5BC6D0034DFE9 /* ShuntingYard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShuntingYard.hpp; sourceTree = "<group>"; };
+		2D9E8BED21B5BC6D0034DFE9 /* Token.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Token.hpp; sourceTree = "<group>"; };
+		2D9E8BEE21B5BC6D0034DFE9 /* Variable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Variable.hpp; sourceTree = "<group>"; };
+		2D9E8BEF21B5BC6D0034DFE9 /* Operator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Operator.hpp; sourceTree = "<group>"; };
+		2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interface.cpp; sourceTree = "<group>"; };
+		2D9E8BF121B5BC6E0034DFE9 /* SimpleList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpleList.hpp; sourceTree = "<group>"; };
+		2D9E8BF221B5BC6E0034DFE9 /* Interface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Interface.hpp; sourceTree = "<group>"; };
+		2D9E8BF321B5BC6E0034DFE9 /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sidebar.hpp; sourceTree = "<group>"; };
+		2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShuntingYard.cpp; sourceTree = "<group>"; };
+		2D9E8BF721B5BC6F0034DFE9 /* LinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E8BE221B5BBD00034DFE9 /* sfml-system.framework in Frameworks */,
+				2D9E8BE321B5BBD00034DFE9 /* sfml-window.framework in Frameworks */,
+				2D9E8BE421B5BBD00034DFE9 /* SFML.framework in Frameworks */,
+				2D9E8BE521B5BBD00034DFE9 /* sfml-graphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +79,7 @@
 			children = (
 				2D9E8BD321B5B9CE0034DFE9 /* Calculator3.0 */,
 				2D9E8BD221B5B9CE0034DFE9 /* Products */,
+				2D9E8BDB21B5BBA70034DFE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +94,39 @@
 		2D9E8BD321B5B9CE0034DFE9 /* Calculator3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2D9E8BE921B5BC6D0034DFE9 /* main.cpp */,
+				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
+				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
+				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
+				2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */,
+				2D9E8BF221B5BC6E0034DFE9 /* Interface.hpp */,
+				2D9E8BF721B5BC6F0034DFE9 /* LinkedList.hpp */,
+				2D9E8BEA21B5BC6D0034DFE9 /* Operand.hpp */,
+				2D9E8BEF21B5BC6D0034DFE9 /* Operator.hpp */,
+				2D9E8BEB21B5BC6D0034DFE9 /* Queue.hpp */,
+				2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */,
+				2D9E8BEC21B5BC6D0034DFE9 /* ShuntingYard.hpp */,
+				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
+				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
+				2D9E8BF121B5BC6E0034DFE9 /* SimpleList.hpp */,
+				2D9E8BF321B5BC6E0034DFE9 /* Stack.hpp */,
+				2D9E8BED21B5BC6D0034DFE9 /* Token.hpp */,
+				2D9E8BEE21B5BC6D0034DFE9 /* Variable.hpp */,
 				2D9E8BD421B5B9CE0034DFE9 /* main.cpp */,
 			);
 			path = Calculator3.0;
+			sourceTree = "<group>";
+		};
+		2D9E8BDB21B5BBA70034DFE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E8BE121B5BBCF0034DFE9 /* sfml-graphics.framework */,
+				2D9E8BDE21B5BBCF0034DFE9 /* sfml-system.framework */,
+				2D9E8BDF21B5BBCF0034DFE9 /* sfml-window.framework */,
+				2D9E8BE021B5BBCF0034DFE9 /* SFML.framework */,
+				2D9E8BDC21B5BBA80034DFE9 /* Frameworks */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E8BF921B5BC6F0034DFE9 /* Sidebar.cpp in Sources */,
+				2D9E8BF821B5BC6F0034DFE9 /* Graph.cpp in Sources */,
+				2D9E8BFA21B5BC6F0034DFE9 /* main.cpp in Sources */,
+				2D9E8BFB21B5BC6F0034DFE9 /* Interface.cpp in Sources */,
 				2D9E8BD521B5B9CE0034DFE9 /* main.cpp in Sources */,
+				2D9E8BFC21B5BC6F0034DFE9 /* ShuntingYard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +313,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37CWHKAPJQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +326,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37CWHKAPJQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
