@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D9E8BD521B5B9CE0034DFE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BD421B5B9CE0034DFE9 /* main.cpp */; };
 		2D9E8BE221B5BBD00034DFE9 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BDE21B5BBCF0034DFE9 /* sfml-system.framework */; };
 		2D9E8BE321B5BBD00034DFE9 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BDF21B5BBCF0034DFE9 /* sfml-window.framework */; };
 		2D9E8BE421B5BBD00034DFE9 /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9E8BE021B5BBCF0034DFE9 /* SFML.framework */; };
@@ -33,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		2D9E8BD121B5B9CE0034DFE9 /* Calculator3.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Calculator3.0; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D9E8BD421B5B9CE0034DFE9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2D9E8BDC21B5BBA80034DFE9 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../../../Library/Frameworks; sourceTree = "<group>"; };
 		2D9E8BDE21B5BBCF0034DFE9 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
 		2D9E8BDF21B5BBCF0034DFE9 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
@@ -96,6 +94,8 @@
 			children = (
 				2D9E8BE921B5BC6D0034DFE9 /* main.cpp */,
 				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
+				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
+				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
 				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
 				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
 				2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */,
@@ -106,13 +106,10 @@
 				2D9E8BEB21B5BC6D0034DFE9 /* Queue.hpp */,
 				2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */,
 				2D9E8BEC21B5BC6D0034DFE9 /* ShuntingYard.hpp */,
-				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
-				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
 				2D9E8BF121B5BC6E0034DFE9 /* SimpleList.hpp */,
 				2D9E8BF321B5BC6E0034DFE9 /* Stack.hpp */,
 				2D9E8BED21B5BC6D0034DFE9 /* Token.hpp */,
 				2D9E8BEE21B5BC6D0034DFE9 /* Variable.hpp */,
-				2D9E8BD421B5B9CE0034DFE9 /* main.cpp */,
 			);
 			path = Calculator3.0;
 			sourceTree = "<group>";
@@ -189,7 +186,6 @@
 				2D9E8BF821B5BC6F0034DFE9 /* Graph.cpp in Sources */,
 				2D9E8BFA21B5BC6F0034DFE9 /* main.cpp in Sources */,
 				2D9E8BFB21B5BC6F0034DFE9 /* Interface.cpp in Sources */,
-				2D9E8BD521B5B9CE0034DFE9 /* main.cpp in Sources */,
 				2D9E8BFC21B5BC6F0034DFE9 /* ShuntingYard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
