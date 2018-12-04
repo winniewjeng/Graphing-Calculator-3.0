@@ -93,9 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				2D9E8BE921B5BC6D0034DFE9 /* main.cpp */,
-				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
 				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
 				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
+				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
 				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
 				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
 				2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */,
