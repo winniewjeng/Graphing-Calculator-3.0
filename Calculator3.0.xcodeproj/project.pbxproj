@@ -16,6 +16,7 @@
 		2D9E8BFA21B5BC6F0034DFE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BE921B5BC6D0034DFE9 /* main.cpp */; };
 		2D9E8BFB21B5BC6F0034DFE9 /* Interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */; };
 		2D9E8BFC21B5BC6F0034DFE9 /* ShuntingYard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */; };
+		2D9E8BFF21B85D250034DFE9 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E8BFD21B85D250034DFE9 /* Equation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sidebar.hpp; sourceTree = "<group>"; };
 		2D9E8BF621B5BC6E0034DFE9 /* ShuntingYard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShuntingYard.cpp; sourceTree = "<group>"; };
 		2D9E8BF721B5BC6F0034DFE9 /* LinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		2D9E8BFD21B85D250034DFE9 /* Equation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Equation.cpp; sourceTree = "<group>"; };
+		2D9E8BFE21B85D250034DFE9 /* Equation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Equation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				2D9E8BF321B5BC6E0034DFE9 /* Stack.hpp */,
 				2D9E8BED21B5BC6D0034DFE9 /* Token.hpp */,
 				2D9E8BEE21B5BC6D0034DFE9 /* Variable.hpp */,
+				2D9E8BFD21B85D250034DFE9 /* Equation.cpp */,
+				2D9E8BFE21B85D250034DFE9 /* Equation.hpp */,
 			);
 			path = Calculator3.0;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9E8BF921B5BC6F0034DFE9 /* Sidebar.cpp in Sources */,
+				2D9E8BFF21B85D250034DFE9 /* Equation.cpp in Sources */,
 				2D9E8BF821B5BC6F0034DFE9 /* Graph.cpp in Sources */,
 				2D9E8BFA21B5BC6F0034DFE9 /* main.cpp in Sources */,
 				2D9E8BFB21B5BC6F0034DFE9 /* Interface.cpp in Sources */,

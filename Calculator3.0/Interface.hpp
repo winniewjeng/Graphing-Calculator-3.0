@@ -16,6 +16,7 @@
 #include "Sidebar.hpp"
 #include <string>
 #include "ShuntingYard.hpp"
+#include "Equation.hpp"
 
 class Interface {
 public:
@@ -37,12 +38,16 @@ public:
     void render();
     void Draw();
 private:
+    
     sf::RenderWindow window;
     sf::CircleShape dot;
     Graph graph;
     Sidebar sidebar;
+    Equation equation;
     
     Queue<sf::CircleShape*> d;
+    
+    float xmin, xmax, ymin, ymax;
 };
 
 #endif /* Interface_hpp */

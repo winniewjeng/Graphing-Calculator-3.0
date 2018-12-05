@@ -8,84 +8,24 @@
 
 #include "Interface.hpp"
 
+// Interface contains god
 Interface::Interface(): sidebar(GRAPH_PANEL, SIDE_BAR), graph() {
 
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Graphing Calculator");
-    window.setFramerateLimit(1);
+    window.setFramerateLimit(60);
     
-    
-    //    Queue<Token*> input;
-    //
-    //    input.push(new Operand(3.0));
-    Queue<sf::CircleShape*> c;
-    c.push(new sf::CircleShape(3));
-    c.push(new sf::CircleShape(4));
-    int i = 20;
-    while (!c.empty()) {
-        c.top()->setFillColor(sf::Color::Magenta);
-        c.top()->setPosition(i,i);
-        i += 100;
-        window.draw(*c.top());
-        c.pop();
-    }
-    
-    dot = sf::CircleShape(5);
-    dot.setFillColor(sf::Color::Magenta);
-//    dot.setPosition(10,10);
-//    window.draw(dot);
-//    Queue<sf::Vector2f> g = graph.getPixelCoords(10, -10, 20);
-    
-    sf::CircleShape* dt = new sf::CircleShape(20);
-    dt->setFillColor(sf::Color::Cyan);
-    dt->setPosition(100,100);
-    d.push(dt);
-    
-    sf::CircleShape* dn = new sf::CircleShape(20);
-    dn->setFillColor(sf::Color::Green);
-    dn->setPosition(400, 400);
-    d.push(dn);
-    
-    sf::CircleShape* dk = new sf::CircleShape(20);
-    dk->setFillColor(sf::Color::Blue);
-    dk->setPosition(250, -200);
-    d.push(dk);
-    
-//    window.draw(*dn);
-    
-//    while (!d.empty()) {
-//        window.draw(*d.top());
-//        d.pop();
-//    }
-//    d.push(dt);
-//    dot.setPosition(100,100);
-    
-//    window.draw(dot);
-//
-//    while (!g.empty()) {
-//        cout << g.top().x << " ";
-//        cout << g.top().y << endl;
-//        dot.setPosition(g.top().x, g.top().y);
-//        window.draw(dot);
-//        g.pop();
-//    }
-    
-    //this is not great
-//    Plot();
-    
+    xmin = -10;
+    xmax = 10;
+    ymin = -10;
+    ymax = 10;
+    equation.getCoords(xmin, xmax, ymin,ymax);
 }
 
 void Interface::Draw() {
 
     graph.Draw(window);
     sidebar.draw(window);
-    
-    //this is working
-    window.draw(dot);
-//    while (!d.empty()) {
-//        window.draw(*d.top());
-//        d.pop();
-//    }
-    
+    equation.Draw(window);
 
 }
 

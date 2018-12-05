@@ -18,9 +18,7 @@
 
 class Shunting {
 public:
-    Shunting() {
-        userInput();
-    }
+    Shunting(string expression = "X ^ 3") : _expression(expression){}
     
     //get the expression for calculation from user input
     void userInput();

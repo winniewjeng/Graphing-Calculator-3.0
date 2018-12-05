@@ -8,23 +8,14 @@
 
 #include "Graph.hpp"
 
-Graph::Graph() {
-    
-    //plot the x- y-axes here
-    
-    //    graph_window.setSize(sf::Vector2f(GRAPH_PANEL, WINDOW_HEIGHT));
-}
-
-//void Graph::plotCoord(float WINDOW_WIDTH, float WINDOW_HEIGHT) {
-//
-//}
+Graph::Graph() {}
 
 Queue<sf::Vector2f> Graph::getCoords(double xlow, double xhigh, int num_grids) {
     
     _num_grids = num_grids;
     // get an equation
     Shunting yard;
-    // make the equation postfix
+    // make the equation postfix -- PRIVATE MEMBER VAR OF GRAPH CLASS 
     Queue<Token*> equation = yard.getRPN();
     // get a container for coordinates
     Queue<sf::Vector2f> coords;
@@ -91,14 +82,6 @@ void Graph::test_pixel_coords() {
     
 }
 
-//Queue<sf::Vector2f> plot(float xhigh, float xlow) {
-//    Queue<sf::Vector2f> coord_vector;
-//    for (int i = xlow; i < xhigh; i++) {
-//        coord_vector.push(sf::Vector2f(i, i));
-//    }
-//    return coord_vector;
-//}
-
 sf::VertexArray Graph::PlotXAxis() {
     
     xAxis = sf::VertexArray(sf::LinesStrip, 3);
@@ -127,10 +110,10 @@ sf::VertexArray Graph::PlotYAxis() {
 
 void Graph::Draw(sf::RenderWindow& window){
     window.clear();
-
+    window.draw(graph_window);
     window.draw(PlotYAxis());
     window.draw(PlotXAxis());
-    window.draw(graph_window);
+    
 }
 
 
