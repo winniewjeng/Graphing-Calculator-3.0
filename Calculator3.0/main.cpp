@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Interface.hpp"
+#include "Graph.hpp"
 
 
 using namespace std;
@@ -12,7 +13,12 @@ int main(int, char const**)
 {
 //
     Interface p;
-    p.test_coords();
+//    p.test_pixel_coords();
+    p.run();
+    
+//    Graph g;
+//    g.test_pixel_coords();
+//    p.test_coords();
 //    Queue<sf::Vector2f> coords = p.getCoords(-4, 4, 8);
 //
 //    while (!coords.empty()) {
