@@ -19,7 +19,6 @@ public:
     }
     
     //copy constructor
-    //NOT YET TESTED
     
     Queue(const Queue& other) {
         this->front = copy_list(other.front);
@@ -37,7 +36,6 @@ public:
     }
     
     //assignment operator
-    //NOT YET TESTED
     
     Queue<T>& operator=(const Queue<T>& rhs) {
         //self-check
@@ -100,14 +98,11 @@ public:
         size--;
         // hold the item front of the queue and delete front
         T hold = delete_head(front);
-        
-        //NOOOOOOOO!!! What about the rear??
-        // reset rear to the last element
+                // reset rear to the last element
         rear = LastNode(front);
         
-        //Do i need this??
         if (empty()) {
-            rear = front; //does this work? I am aligning my rear to my front
+            rear = front;
         }
         return hold;
     }

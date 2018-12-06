@@ -32,11 +32,6 @@ public:
     // get a set of pixel coordinates given the range
     Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
     
-//    void setXAxis() {
-//        xAxis.setPrimitiveType(sf::LineStrip);
-////        sf::LinesStrip, 3);
-//    }
-    
     // for testing purpose only
     void test_pixel_coords();
     void test_coords();

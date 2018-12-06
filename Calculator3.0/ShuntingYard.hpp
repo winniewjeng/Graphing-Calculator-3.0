@@ -38,7 +38,6 @@ public:
     //get a queue of Token* as an RPN equation
     Queue<Token*> getRPN() {
         Queue<Token*> equation = toPostFix(toToken());
-        cout << "is eqn queue" << equation << " empty in get rpn? " << equation.empty() << endl;
         return equation;
     }
     string getExpression() {return _expression;}

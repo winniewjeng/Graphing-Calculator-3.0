@@ -19,9 +19,7 @@ class Equation {
     
 public:
     Equation() : yard(), postfix_queue(yard.getRPN()) {
-        
-//        postfix_queue = yard.getRPN();
-        cout << "is postfix_queue empty in Eqn ctor? " << postfix_queue.empty() << endl;
+
         xyCoords.setPrimitiveType(sf::LinesStrip);
     }
     

@@ -1,5 +1,4 @@
 
-
 #ifndef SimpleList_hpp
 #define SimpleList_hpp
 #include "LinkedList.hpp"
