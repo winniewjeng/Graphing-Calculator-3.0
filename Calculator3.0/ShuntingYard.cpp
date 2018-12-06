@@ -137,13 +137,19 @@ Queue<Token*> Shunting::toPostFix(Queue<Token*> infix) {
 }
 
 double Shunting::Eval(Queue<Token*> postfix, double var_num) {
+    cout << postfix.empty() << endl;
     //a stack that stores double* Operands
     Stack<double> eval_stack;
+    cout << postfix << " inside eval" << endl;
+    cout << var_num << " is var num\n";
+    cout << postfix.empty() << endl;
     
     while (!postfix.empty()) {
+        cout << "do we get here?\n";
+        cout << postfix << " inside the while loop"<< endl;
         //get the top Token* in the postfix queue
         Token* tok = postfix.pop();
-        
+        cout << "in the while loop\n";
         if (tok->get_type() == VARIABLE) {
             //push var_num into the eval_stack in lieu of the variable token
             eval_stack.push(var_num);
@@ -173,6 +179,7 @@ double Shunting::Eval(Queue<Token*> postfix, double var_num) {
             eval_stack.push(result);
         }
     }
+//    cout << eval_stack.top() << " is top";
     return eval_stack.top();
 }
 
@@ -204,8 +211,3 @@ void Shunting::test_shunting() {
     cout << "Evaluated postfix expression is " << Eval(postfix, 2) << endl;
 };
 
-void Shunting::userInput() {
-    cout << "Enter an expression, i.e. 5.5 ( 4.0 ^ 2 + X ) sin ( 0.9 ) \n";
-    cout << "My expression: ";
-    getline(cin, _expression);
-};

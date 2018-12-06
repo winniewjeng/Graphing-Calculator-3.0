@@ -10,7 +10,7 @@
 
 // Interface contains god
 Interface::Interface(): sidebar(GRAPH_PANEL, SIDE_BAR), graph() {
-
+    
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Graphing Calculator");
     window.setFramerateLimit(60);
     
@@ -19,6 +19,8 @@ Interface::Interface(): sidebar(GRAPH_PANEL, SIDE_BAR), graph() {
     ymin = -10;
     ymax = 10;
     equation.getCoords(xmin, xmax, ymin,ymax);
+
+    
 }
 
 void Interface::Draw() {

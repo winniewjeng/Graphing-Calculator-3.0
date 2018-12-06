@@ -50,6 +50,7 @@ private:
     
     sf::RectangleShape graph_window;
     int _num_grids;
+    
 };
 
 #endif /* Graph_hpp */

@@ -18,10 +18,16 @@
 
 class Shunting {
 public:
-    Shunting(string expression = "X ^ 3") : _expression(expression){}
+    Shunting() {
+        userInput(); // get the expression string
+    }
     
     //get the expression for calculation from user input
-    void userInput();
+    void userInput() {
+        cout << "Enter an expression, i.e. 5.5 ( 4.0 ^ 2 + X ) sin ( 0.9 ) \n";
+        cout << "My expression: ";
+        getline(cin, _expression);
+    }
     
     //parse the user-input string into tokens and store them in queue
     Queue<Token*> toToken();
@@ -32,9 +38,10 @@ public:
     //get a queue of Token* as an RPN equation
     Queue<Token*> getRPN() {
         Queue<Token*> equation = toPostFix(toToken());
+        cout << "is eqn queue" << equation << " empty in get rpn? " << equation.empty() << endl;
         return equation;
     }
-    
+    string getExpression() {return _expression;}
     //evaluate the postfix queue
     double Eval(Queue<Token*> postfix, double var_num);
     

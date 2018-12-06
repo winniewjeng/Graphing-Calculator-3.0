@@ -20,23 +20,16 @@
 
 class Interface {
 public:
+    
     Interface();
     void run();
-    
-//    // get a set of coordinates given the range and number of screen units
-//    Queue<sf::Vector2f> getCoords(double xlow, double xhigh, int num_grids);
-//    // get a set of pixel coordinates given the range
-//    Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
-    
     // plot the pixel coordinates on graph panel
     void Plot();
-    
-    // plot axes -- testing stage
-    
     // plotting
     void processEvents();
     void render();
     void Draw();
+    
 private:
     
     sf::RenderWindow window;

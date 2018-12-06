@@ -18,10 +18,16 @@ using namespace std;
 class Equation {
     
 public:
-    Equation() : infix_expression("X ^ 2"), yard(infix_expression) {
-        postfix_queue = yard.getRPN();
+    Equation() : yard(), postfix_queue(yard.getRPN()) {
+        
+//        postfix_queue = yard.getRPN();
+        cout << "is postfix_queue empty in Eqn ctor? " << postfix_queue.empty() << endl;
         xyCoords.setPrimitiveType(sf::LinesStrip);
     }
+    
+//    //get the expression for calculation from user input
+//    void userInput();
+    
     // get a set of coordinates given the range and number of screen units
     void getCoords(double xmin, double xmax, double ymin, double ymax);
     // get a set of pixel coordinates given the range
@@ -37,7 +43,6 @@ private:
     Shunting yard;
     Queue<Token*> postfix_queue;
     sf::VertexArray xyCoords;
-    
     
 };
 
