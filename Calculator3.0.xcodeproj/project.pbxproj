@@ -98,11 +98,13 @@
 				2D9E8BE921B5BC6D0034DFE9 /* main.cpp */,
 				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
 				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
-				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
 				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
 				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
+				2D9E8BFE21B85D250034DFE9 /* Equation.hpp */,
+				2D9E8BFD21B85D250034DFE9 /* Equation.cpp */,
 				2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */,
 				2D9E8BF221B5BC6E0034DFE9 /* Interface.hpp */,
+				2D9E8BE721B5BC6C0034DFE9 /* Constants.hpp */,
 				2D9E8BF721B5BC6F0034DFE9 /* LinkedList.hpp */,
 				2D9E8BEA21B5BC6D0034DFE9 /* Operand.hpp */,
 				2D9E8BEF21B5BC6D0034DFE9 /* Operator.hpp */,
@@ -113,8 +115,6 @@
 				2D9E8BF321B5BC6E0034DFE9 /* Stack.hpp */,
 				2D9E8BED21B5BC6D0034DFE9 /* Token.hpp */,
 				2D9E8BEE21B5BC6D0034DFE9 /* Variable.hpp */,
-				2D9E8BFD21B85D250034DFE9 /* Equation.cpp */,
-				2D9E8BFE21B85D250034DFE9 /* Equation.hpp */,
 			);
 			path = Calculator3.0;
 			sourceTree = "<group>";

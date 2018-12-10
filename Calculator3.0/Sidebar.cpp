@@ -8,6 +8,8 @@
 
 #include "Sidebar.hpp"
 
+//using namespace sf;
+
 Sidebar::Sidebar(float left, float width):_left(left), _width(width) {
     
     //set up the sidebar rectangle:

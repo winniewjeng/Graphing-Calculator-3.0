@@ -19,7 +19,7 @@ class Equation {
     
 public:
     Equation() : yard(), postfix_queue(yard.getRPN()) {
-
+        
         xyCoords.setPrimitiveType(sf::LinesStrip);
     }
     
@@ -29,7 +29,7 @@ public:
     // get a set of coordinates given the range and number of screen units
     void getCoords(double xmin, double xmax, double ymin, double ymax);
     // get a set of pixel coordinates given the range
-    Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
+//    Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
     // for testing purpose only
     void test_pixel_coords();
     void test_coords();

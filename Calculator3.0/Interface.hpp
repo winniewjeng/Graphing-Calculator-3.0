@@ -1,10 +1,3 @@
-//
-//  Interface.hpp
-//  Calculator3.0
-//
-//  Created by Winnie Jeng on 12/1/18.
-//  Copyright © 2018 Winnie Jeng. All rights reserved.
-//
 
 #ifndef Interface_hpp
 #define Interface_hpp
@@ -23,9 +16,6 @@ public:
     
     Interface();
     void run();
-    // plot the pixel coordinates on graph panel
-    void Plot();
-    // plotting
     void processEvents();
     void render();
     void Draw();

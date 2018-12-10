@@ -31,7 +31,7 @@ void Equation::getCoords(double xmin, double xmax, double ymin, double ymax) {
 //        cout << postfix_queue << " is postfixqueue vbefore eval\n";
         double yval = yard.Eval(postfix_queue, xval);
         
-        double ypixel = (1 - (yval/yrange)) * WINDOW_HEIGHT;
+        double ypixel = (1 - (yval/yrange)) * WINDOW_HEIGHT/2;
         sf::Vertex vertex;
         vertex.position = sf::Vector2f(i, ypixel);
         vertex.color = sf::Color::Red;
