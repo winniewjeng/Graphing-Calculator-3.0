@@ -25,8 +25,6 @@ public:
     sf::VertexArray PlotXAxis();
     sf::VertexArray PlotYAxis();
     
-//    Queue<sf::Vector2f> plot(float xhigh, float xlow, float num_grids);
-    
     // get a set of coordinates given the range and number of screen units
     Queue<sf::Vector2f> getCoords(double xlow, double xhigh, int num_grids);
     // get a set of pixel coordinates given the range

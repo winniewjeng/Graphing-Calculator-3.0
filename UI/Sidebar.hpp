@@ -1,10 +1,3 @@
-//
-//  Sidebar.hpp
-//  Calculator3.0
-//
-//  Created by Winnie Jeng on 12/3/18.
-//  Copyright © 2018 Winnie Jeng. All rights reserved.
-//
 
 #ifndef Sidebar_hpp
 #define Sidebar_hpp
