@@ -7,9 +7,10 @@
 #include "Constants.hpp"
 #include "Graph.hpp"
 #include "Sidebar.hpp"
-#include <string>
 #include "ShuntingYard.hpp"
 #include "Equation.hpp"
+
+using namespace sf;
 
 class Interface {
 public:
@@ -22,15 +23,11 @@ public:
     
 private:
     
-    sf::RenderWindow window;
-    sf::CircleShape dot;
+    float xmin, xmax, ymin, ymax;
+    RenderWindow window;
     Graph graph;
     Sidebar sidebar;
     Equation equation;
-    
-    Queue<sf::CircleShape*> d;
-    
-    float xmin, xmax, ymin, ymax;
 };
 
 #endif /* Interface_hpp */

@@ -17,31 +17,30 @@
 #include "ShuntingYard.hpp"
 
 using namespace std;
+using namespace sf;
 class Graph {
 public:
     Graph();
     
     //plot the coordinate axes
-    sf::VertexArray PlotXAxis();
-    sf::VertexArray PlotYAxis();
+    VertexArray PlotXAxis();
+    VertexArray PlotYAxis();
     
     // get a set of coordinates given the range and number of screen units
-    Queue<sf::Vector2f> getCoords(double xlow, double xhigh, int num_grids);
+    Queue<Vector2f> getCoords(double xlow, double xhigh, int num_grids);
     // get a set of pixel coordinates given the range
-    Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
+    Queue<Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
     
     // for testing purpose only
     void test_pixel_coords();
     void test_coords();
     
-    void Draw(sf::RenderWindow& widnow);
+    void Draw(RenderWindow& widnow);
     
 private:
-    sf::CircleShape shape;
-    sf::VertexArray xAxis;
-    sf::VertexArray yAxis;
-    
-    sf::RectangleShape graph_window;
+    VertexArray xAxis;
+    VertexArray yAxis;
+    RectangleShape graph_window;
     int _num_grids;
     
 };

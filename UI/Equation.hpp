@@ -8,6 +8,7 @@
 
 #ifndef Equation_hpp
 #define Equation_hpp
+
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include "Constants.hpp"
@@ -15,6 +16,7 @@
 #include "ShuntingYard.hpp"
 
 using namespace std;
+using namespace sf;
 class Equation {
     
 public:
@@ -33,14 +35,14 @@ public:
     // for testing purpose only
     void test_pixel_coords();
     void test_coords();
-    void Draw(sf::RenderWindow& window);
+    void Draw(RenderWindow& window);
     
     
 private:
     string infix_expression;
     Shunting yard;
     Queue<Token*> postfix_queue;
-    sf::VertexArray xyCoords;
+    VertexArray xyCoords;
     
 };
 

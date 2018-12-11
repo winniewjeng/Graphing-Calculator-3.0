@@ -24,7 +24,7 @@ public:
     
     //get the expression for calculation from user input
     void userInput() {
-        cout << "Enter an expression, i.e. 5.5 ( 4.0 ^ 2 + X ) sin ( 0.9 ) \n";
+        cout << "Enter an expression, i.e. 4 sin ( tan ( X + 3 ) )\n";
         cout << "My expression: ";
         getline(cin, _expression);
     }
