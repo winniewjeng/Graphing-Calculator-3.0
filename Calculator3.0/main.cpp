@@ -18,7 +18,6 @@ using namespace std;
 
 int main(int, char const**)
 {
-//
     Interface p;
 //    p.test_pixel_coords();
     p.run();
@@ -28,7 +27,7 @@ int main(int, char const**)
 //    p.test_coords();
 //    Queue<sf::Vector2f> coords = p.getCoords(-4, 4, 8);
 //
-//    while (!coords.empty()) {
+//    while (!coords.esmpty()) {
 //        cout << coords.top().x << " ";
 //        cout << coords.top().y;
 //        cout << endl;

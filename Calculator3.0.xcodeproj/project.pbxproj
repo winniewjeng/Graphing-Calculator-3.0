@@ -58,6 +58,7 @@
 		2D9E8BF721B5BC6F0034DFE9 /* LinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		2D9E8BFD21B85D250034DFE9 /* Equation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Equation.cpp; sourceTree = "<group>"; };
 		2D9E8BFE21B85D250034DFE9 /* Equation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Equation.hpp; sourceTree = "<group>"; };
+		2D9E8C2021BFB5480034DFE9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				2D9E8C0B21BF33520034DFE9 /* DataStructure */,
 				2D9E8C0C21BF33520034DFE9 /* RPN */,
 				2D9E8C0D21BF33520034DFE9 /* UI */,
+				2D9E8C1F21BFB4BC0034DFE9 /* Resources */,
 				2D9E8BD221B5B9CE0034DFE9 /* Products */,
 				2D9E8BDB21B5BBA70034DFE9 /* Frameworks */,
 			);
@@ -145,14 +147,22 @@
 			children = (
 				2D9E8BE821B5BC6C0034DFE9 /* Sidebar.cpp */,
 				2D9E8BF521B5BC6E0034DFE9 /* Sidebar.hpp */,
-				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
-				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
 				2D9E8BFE21B85D250034DFE9 /* Equation.hpp */,
 				2D9E8BFD21B85D250034DFE9 /* Equation.cpp */,
+				2D9E8BE621B5BC6C0034DFE9 /* Graph.cpp */,
+				2D9E8BF421B5BC6E0034DFE9 /* Graph.hpp */,
 				2D9E8BF021B5BC6D0034DFE9 /* Interface.cpp */,
 				2D9E8BF221B5BC6E0034DFE9 /* Interface.hpp */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2D9E8C1F21BFB4BC0034DFE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E8C2021BFB5480034DFE9 /* Roboto-Thin.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

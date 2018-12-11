@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include "Constants.hpp"
+#include "Equation.hpp"
 
 using namespace std;
 using namespace sf;
@@ -19,15 +20,19 @@ public:
     void draw(RenderWindow& window);
     // NOT YET IMPLEMENTED
     string& operator [](int index);
+    void eqn_str(string infix_expression) {_infix_expression = infix_expression;}
     
 private:
     
     RectangleShape bar; //sidebar rectangle
     vector<string> items; //strings to place on the sidebar
-    Font font; //used to draw text
-    Text sb_text; //used to draw strings on the window object
-    float _left;
-    float _width;
+    Font font;
+    Text text; // strings on the window
+    
+//    float _left;
+//    float _width;
+    
+    string _infix_expression;
 };
 
 #endif /* Sidebar_hpp */

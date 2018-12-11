@@ -1,6 +1,12 @@
 
 #include "ShuntingYard.hpp"
 
+void Shunting::userInput() {
+    cout << "Enter an expression, i.e. 4 sin ( tan ( X + 3 ) )\n";
+    cout << "My expression: ";
+    getline(cin, _expression);
+}
+
 // convert user input string to token and then store queue
 Queue<Token*> Shunting::toToken() {
     
@@ -96,13 +102,31 @@ Queue<Token*> Shunting::toPostFix(Queue<Token*> infix) {
                 }
                 // if the optr_item is a closed parenthesis, mary poppings the optr stack to postfix
                 else if (optr_item->get_symb() == ")") {
-                    while(optr.top()->get_symb() != "(") {
-                        //                        cout << optr.top()->get_symb() << endl;
-                        postfix.push(optr.pop());
+                    try {
+                        while(optr.top()->get_symb() != "(") {
+                            
+                            try {
+                            // cout << optr.top()->get_symb() << endl;
+                                postfix.push(optr.pop());
+                                
+                            } catch (node<Operator*>*) {
+                                cerr << "Error: cannot pop an empty stack" << endl;
+                                exit(-1);
+                            }
+                        }
+                    } catch (node<Operator*>*) {
+                        cerr << "Error: top is empty in empty stack" << endl;
+                        exit(-1);
                     }
-                    //                    cout << optr.top() << endl;
+                    // cout << optr.top() << endl;
                     //disgard the open parenthesis from stack
-                    optr.pop();
+                    try {
+                        optr.pop();
+                        
+                    } catch (node<Operator*>*) {
+                        cerr << "Error: top is empty in empty stack" << endl;
+                        exit(-1);
+                    }
                     // store the popped item as the previous item for the next round
                     prev_item = optr_item; ////
                 }

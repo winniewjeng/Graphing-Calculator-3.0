@@ -68,5 +68,6 @@ void Equation::Draw(sf::RenderWindow& window)
     window.draw(yAxis);
     window.draw(xAxis);
     window.draw(xyCoords);
+    _graphDrawn = true;
 }
 

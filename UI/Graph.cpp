@@ -15,7 +15,6 @@ Graph::Graph() {
     graph_window.setSize(Vector2f(GRAPH_PANEL, WINDOW_HEIGHT));
 }
 
-
 void Graph::Draw(sf::RenderWindow& window){
     window.clear();
     window.draw(graph_window);

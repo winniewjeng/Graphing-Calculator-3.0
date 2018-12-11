@@ -23,11 +23,7 @@ public:
     }
     
     //get the expression for calculation from user input
-    void userInput() {
-        cout << "Enter an expression, i.e. 4 sin ( tan ( X + 3 ) )\n";
-        cout << "My expression: ";
-        getline(cin, _expression);
-    }
+    void userInput();
     
     //parse the user-input string into tokens and store them in queue
     Queue<Token*> toToken();

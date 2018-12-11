@@ -26,11 +26,13 @@ public:
         xyCoords.setPrimitiveType(LinesStrip);
         xAxis.setPrimitiveType(LinesStrip);
         yAxis.setPrimitiveType(LinesStrip);
+        _graphDrawn = false;
     }
     // get a set of coordinates given the xy-range
     void getCoords(double xmin, double xmax, double grids);
     void Draw(RenderWindow& window);
-    
+    bool graphDrawn() {return _graphDrawn;}
+    string get_expression() {return infix_expression;}
     
 private:
     string infix_expression;
@@ -40,6 +42,8 @@ private:
     
     VertexArray xAxis;
     VertexArray yAxis;
+    
+    bool _graphDrawn;
 };
 
 #endif /* Equation_hpp */
