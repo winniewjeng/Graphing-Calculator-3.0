@@ -14,7 +14,7 @@ Interface::Interface(): sidebar(), graph() {
     //grid nums
     grids = 7;
     
-    equation.getCoords(xmin, xmax, grids);
+//    equation.getCoords(xmin, xmax, grids);
 
 }
 

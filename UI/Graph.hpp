@@ -20,31 +20,13 @@ using namespace std;
 using namespace sf;
 class Graph {
 public:
-    Graph();
     
-//    //plot the coordinate axes
-//    VertexArray PlotXAxis();
-//    VertexArray PlotYAxis();
-    // get the xy-axes on the graph (or not) given the xy-range
-//    void getXAxis(double xmin, double xmax);
-    void getXAxis(double xmin, double xmax) {
-        
-        xAxis.setPrimitiveType(LinesStrip);
-        
-        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
-            if ( xmin <= 0 && xmax >= 0) {
-                
-            }
-        }
-    }
+    Graph();
     void Draw(RenderWindow& widnow);
     
 private:
-    VertexArray xAxis;
-//    VertexArray yAxis;
-    RectangleShape graph_window;
-    int _num_grids;
     
+    RectangleShape graph_window;
 };
 
 #endif /* Graph_hpp */
