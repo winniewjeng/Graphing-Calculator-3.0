@@ -32,10 +32,12 @@ public:
     void getCoords(double xmin, double xmax, double grids);
     void Draw(RenderWindow& window);
     bool graphDrawn() {return _graphDrawn;}
-    string get_expression() {return infix_expression;}
+    void getXAxis(double xpixel, double ypixel);
+    void getYAxis(double xpixel, double ypixel);
+//    string get_expression() {return infix_expression;}
     
 private:
-    string infix_expression;
+//    string infix_expression;
     Shunting yard;
     Queue<Token*> postfix_queue;
     VertexArray xyCoords;

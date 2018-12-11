@@ -22,7 +22,7 @@ Sidebar::Sidebar() {
     text.setFillColor(Color::Black);
     text.setStyle(Text::Bold);
     items.push_back("Enter Equation:");
-    items.push_back(" " + _infix_expression);
+//    items.push_back(" " + _infix_expression);
     //Fill the items vector with empty strings so that we can use [] to read them:
     for (int i=0 ; i < 100; i++){
         items.push_back(" ");

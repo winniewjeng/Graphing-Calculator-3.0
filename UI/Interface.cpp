@@ -19,8 +19,8 @@ Interface::Interface(): sidebar(), graph() {
     grids = 7;
     
     equation.getCoords(xmin, xmax, grids);
-    string eqn = equation.get_expression();
-    sidebar.eqn_str(eqn);
+//    string eqn = equation.get_expression();
+//    sidebar.eqn_str(eqn);
     
 }
 

@@ -20,7 +20,7 @@ public:
     void draw(RenderWindow& window);
     // NOT YET IMPLEMENTED
     string& operator [](int index);
-    void eqn_str(string infix_expression) {_infix_expression = infix_expression;}
+//    void eqn_str(string infix_expression) {_infix_expression = infix_expression;}
     
 private:
     
@@ -32,7 +32,7 @@ private:
 //    float _left;
 //    float _width;
     
-    string _infix_expression;
+//    string _infix_expression;
 };
 
 #endif /* Sidebar_hpp */

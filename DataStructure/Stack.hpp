@@ -30,7 +30,6 @@ public:
         if (stack.Begin() == nullptr) {
             throw stack.Begin();
             exit(-1);
-//            throw "Error: poping an empty stack";
         }
         
         assert (stack.Begin()!=nullptr);
@@ -43,10 +42,8 @@ public:
         if (stack.Begin() == nullptr) {
             cout << stack.Begin() << " is stack begin" << endl;
             throw stack.Begin();
-            exit(-1);
 //            throw "Error: stack top is empty";
         }
-        
         assert (stack.Begin()!=nullptr);
         return stack.Begin()->_item;
     }
