@@ -28,7 +28,7 @@ public:
         yAxis.setPrimitiveType(LinesStrip);
     }
     // get a set of coordinates given the xy-range
-    void getCoords(double xmin, double xmax, double ymin, double ymax);
+    void getCoords(double xmin, double xmax, double grids);
     void Draw(RenderWindow& window);
     
     

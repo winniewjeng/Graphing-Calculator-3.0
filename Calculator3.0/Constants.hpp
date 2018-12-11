@@ -14,9 +14,9 @@ const int OPERATOR = 0;
 const int OPERAND = 1;
 const int VARIABLE = 2;
 
-const float WINDOW_WIDTH = 1400;
-const float WINDOW_HEIGHT = 900;
-const float GRAPH_PANEL = WINDOW_WIDTH*4/5;
-const float SIDE_BAR = WINDOW_WIDTH*1/5;
+const float WINDOW_WIDTH = 2400;
+const float WINDOW_HEIGHT = 1350;
+const float GRAPH_PANEL = WINDOW_WIDTH*2.8/5;
+const float SIDE_BAR = WINDOW_WIDTH*2.2/5;
 
 #endif /* Constants_hpp */

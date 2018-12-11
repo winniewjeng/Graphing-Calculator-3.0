@@ -9,13 +9,12 @@ Interface::Interface(): sidebar(), graph() {
     window.setFramerateLimit(60);
     cout << GRAPH_PANEL << " X " << WINDOW_HEIGHT << endl;
     
-    xmin = -4;
-    xmax = 4;
-    ymin = -4;
-    ymax = 4;
+    xmin = - 2 * 3.14 ;
+    xmax = 2 * 3.14;
+    //grid nums
+    grids = 7;
     
-    //   graph.getAxes(xmin, xmax, ymin, ymax);
-    equation.getCoords(xmin, xmax, ymin, ymax);
+    equation.getCoords(xmin, xmax, grids);
 
 }
 
@@ -33,10 +32,29 @@ void Interface::run() {
 void Interface::processEvents() {
     
     Event event;
+    float mouseX, mouseY;
     while (window.pollEvent(event)) {
-        if (event.Closed) {
-            window.close();
+        
+        switch (event.type) {
+                case Event::Closed:
+                window.close();
+                    break;
+                case Event::KeyPressed:
+                switch(event.key.code) {
+                        case::Keyboard::Q:
+                        window.close();
+                        break;
+                        case::Keyboard::Escape:
+                        window.close();
+                        break;
+                }
         }
+        
+//        if (event.Closed) {
+//
+//            window.close();
+//
+//        }
     }
 }
 

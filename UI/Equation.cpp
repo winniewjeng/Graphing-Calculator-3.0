@@ -8,46 +8,51 @@
 
 #include "Equation.hpp"
 
-void Equation::getCoords(double xmin, double xmax, double ymin, double ymax) {
+void Equation::getCoords(double xmin, double xmax, double grids) {
     
     xyCoords.clear();
     
     cout << "Postfix: " << postfix_queue << endl;
     
     double xrange = xmax - xmin;
-    double yrange = ymax - ymin;
-    cout << "xrange: " << xrange << endl;
-    cout << "yrange: " << yrange << endl;
     
-    for (int xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
+    for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
         
         double xval = xmin + (xpixel / GRAPH_PANEL) * xrange;
         // evaluate y
         double yval = yard.Eval(postfix_queue, xval);
-        
-        cout << "(" << xval << ", " << yval << ")\n";
-        
+
         // get y pixel
-        double ypixel = (1 - (yval / yrange * 2) ) * WINDOW_HEIGHT / 2;
-        cout << "<" << xpixel << ", " << ypixel << ">\n\n";
-        //        cout << "(" << xval << ", " << yval << ")\n";
-        //if yval == 0, use pixel to plot x-axis
-        //        if (xval == 0) {
-        //            cout << "(" << xval << ", " << yval << ")\n";
-        //            cout << "y == 0!\n";
-        //            Vertex xVertex[3];
-        //            // left-most point is (xminPixel, ypixel)
-        //            // middle point is (xpixel, ypixel)
-        //            xVertex[0].position = Vector2f(0, ypixel);
-        //            xVertex[0].color = Color::White;
-        //            xAxis.append(xVertex[0]);
-        //            xVertex[1].position = Vector2f(xpixel, ypixel);
-        //            xVertex[1].color = Color::White;
-        //            xAxis.append(xVertex[1]);
-        //            xVertex[2].position = Vector2f(GRAPH_PANEL, ypixel);
-        //            xVertex[2].color = Color::White;
-        //            xAxis.append(xVertex[2]);
-        //        }
+        double ypixel = (1 - (yval / grids * 2) ) * WINDOW_HEIGHT / 2;
+
+////        //if yval == 0, use pixel to plot x-axis
+        if (xval == 0) {
+            Vertex yVertex[3];
+            yVertex[0].position = Vector2f(xpixel, 0);
+            yVertex[0].color = Color::White;
+            yAxis.append(yVertex[0]);
+            yVertex[1].position = Vector2f(xpixel, ypixel);
+            yVertex[1].color = Color::White;
+            yAxis.append(yVertex[1]);
+            yVertex[2].position = Vector2f(xpixel, WINDOW_HEIGHT);
+            yVertex[2].color = Color::White;
+            yAxis.append(yVertex[2]);
+        }
+        if (yval == 0) {
+            Vertex xVertex[3];
+            // left-most point is (xminPixel, ypixel)
+            // middle point is (xpixel, ypixel)
+            xVertex[0].position = Vector2f(0, ypixel);
+            xVertex[0].color = Color::White;
+            xAxis.append(xVertex[0]);
+            xVertex[1].position = Vector2f(xpixel, ypixel);
+            xVertex[1].color = Color::White;
+            xAxis.append(xVertex[1]);
+            xVertex[2].position = Vector2f(GRAPH_PANEL, ypixel);
+            xVertex[2].color = Color::White;
+            xAxis.append(xVertex[2]);
+        }
+        
         //store pixel location inside a vertex
         Vertex vertex;
         vertex.position = Vector2f(xpixel, ypixel);
@@ -60,6 +65,7 @@ void Equation::getCoords(double xmin, double xmax, double ymin, double ymax) {
 
 void Equation::Draw(sf::RenderWindow& window)
 {
+    window.draw(yAxis);
     window.draw(xAxis);
     window.draw(xyCoords);
 }

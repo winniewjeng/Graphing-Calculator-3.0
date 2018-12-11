@@ -23,7 +23,9 @@ public:
     
 private:
     
-    float xmin, xmax, ymin, ymax;
+    float xmin;
+    float xmax;
+    float grids;
     RenderWindow window;
     Graph graph;
     Sidebar sidebar;
