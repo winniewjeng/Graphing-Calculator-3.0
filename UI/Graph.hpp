@@ -22,24 +22,16 @@ class Graph {
 public:
     Graph();
     
-    //plot the coordinate axes
-    VertexArray PlotXAxis();
-    VertexArray PlotYAxis();
-    
-    // get a set of coordinates given the range and number of screen units
-    Queue<Vector2f> getCoords(double xlow, double xhigh, int num_grids);
-    // get a set of pixel coordinates given the range
-    Queue<Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
-    
-    // for testing purpose only
-    void test_pixel_coords();
-    void test_coords();
-    
+//    //plot the coordinate axes
+//    VertexArray PlotXAxis();
+//    VertexArray PlotYAxis();
+    // get the xy-axes on the graph (or not) given the xy-range
+//    void getXAxis(double xmin, double xmax);
     void Draw(RenderWindow& widnow);
     
 private:
-    VertexArray xAxis;
-    VertexArray yAxis;
+//    VertexArray xAxis;
+//    VertexArray yAxis;
     RectangleShape graph_window;
     int _num_grids;
     

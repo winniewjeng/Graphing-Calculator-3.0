@@ -12,16 +12,20 @@ using namespace std;
 using namespace sf;
 
 class Sidebar {
+    
 public:
-    Sidebar() {}
-    Sidebar(float left, float width);
+    // CTOR -- set up the sidebar rectangle
+    Sidebar();
     void draw(RenderWindow& window);
+    // NOT YET IMPLEMENTED
     string& operator [](int index);
+    
 private:
-    RectangleShape bar;            //sidebar rectangle
-    vector<string> items;               //strings to place on the sidebar
-    Font font;                      //used to draw text
-    Text sb_text;                   //used to draw strings on the window object
+    
+    RectangleShape bar; //sidebar rectangle
+    vector<string> items; //strings to place on the sidebar
+    Font font; //used to draw text
+    Text sb_text; //used to draw strings on the window object
     float _left;
     float _width;
 };

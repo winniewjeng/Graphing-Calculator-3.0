@@ -17,24 +17,18 @@
 
 using namespace std;
 using namespace sf;
+
 class Equation {
     
 public:
+    // CTOR -- initializes Shunting yard object, postfix_queue of token queue, & xyCoords of vertex array as LinesStrip primitive type
     Equation() : yard(), postfix_queue(yard.getRPN()) {
-        
-        xyCoords.setPrimitiveType(sf::LinesStrip);
+        xyCoords.setPrimitiveType(LinesStrip);
+        xAxis.setPrimitiveType(LinesStrip);
+        yAxis.setPrimitiveType(LinesStrip);
     }
-    
-//    //get the expression for calculation from user input
-//    void userInput();
-    
-    // get a set of coordinates given the range and number of screen units
+    // get a set of coordinates given the xy-range
     void getCoords(double xmin, double xmax, double ymin, double ymax);
-    // get a set of pixel coordinates given the range
-//    Queue<sf::Vector2f> getPixelCoords(double xlow, double xhigh, int num_grids);
-    // for testing purpose only
-    void test_pixel_coords();
-    void test_coords();
     void Draw(RenderWindow& window);
     
     
@@ -44,6 +38,8 @@ private:
     Queue<Token*> postfix_queue;
     VertexArray xyCoords;
     
+    VertexArray xAxis;
+    VertexArray yAxis;
 };
 
 #endif /* Equation_hpp */

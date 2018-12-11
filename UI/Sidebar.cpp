@@ -1,13 +1,13 @@
 
 #include "Sidebar.hpp"
 
-Sidebar::Sidebar(float left, float width):_left(left), _width(width) {
-    
-    //set up the sidebar rectangle:
-    bar.setFillColor(Color(200,200,200));  // grayish blue
-//    bar.setFillColor(sf::Color(170, 177, 206));
-    bar.setPosition(Vector2f(WINDOW_WIDTH-SIDE_BAR, 0)); // sidebar align left
-    bar.setSize(Vector2f(width, WINDOW_HEIGHT));
+
+Sidebar::Sidebar() {
+    // set the bar to gray color
+    bar.setFillColor(Color(200,200,200));
+    // sidebar align right
+    bar.setPosition(Vector2f(GRAPH_PANEL, 0));
+    bar.setSize(Vector2f(SIDE_BAR, WINDOW_HEIGHT));
 }
 
 void Sidebar::draw(RenderWindow& window) {

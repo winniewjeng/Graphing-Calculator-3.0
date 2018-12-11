@@ -8,35 +8,59 @@
 
 #include "Equation.hpp"
 
-void Equation::Draw(sf::RenderWindow& window)
-{
-    window.draw(xyCoords);
-}
-
 void Equation::getCoords(double xmin, double xmax, double ymin, double ymax) {
     
     xyCoords.clear();
     
-    cout << postfix_queue << endl;
-    // get a container for coordinates
+    cout << "Postfix: " << postfix_queue << endl;
+    
     double xrange = xmax - xmin;
     double yrange = ymax - ymin;
-//    cout << postfix_queue << " inside getcoords\n";
-//    cout << postfix_queue.empty() << endl;
+    cout << "xrange: " << xrange << endl;
+    cout << "yrange: " << yrange << endl;
+    
     for (int xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
-        //
+        
         double xval = xmin + (xpixel / GRAPH_PANEL) * xrange;
         // evaluate y
         double yval = yard.Eval(postfix_queue, xval);
+        
+        cout << "(" << xval << ", " << yval << ")\n";
+        
         // get y pixel
-        double ypixel = (1 - (yval/yrange)) * WINDOW_HEIGHT/2;
-        
+        double ypixel = (1 - (yval / yrange * 2) ) * WINDOW_HEIGHT / 2;
+        cout << "<" << xpixel << ", " << ypixel << ">\n\n";
+        //        cout << "(" << xval << ", " << yval << ")\n";
+        //if yval == 0, use pixel to plot x-axis
+        //        if (xval == 0) {
+        //            cout << "(" << xval << ", " << yval << ")\n";
+        //            cout << "y == 0!\n";
+        //            Vertex xVertex[3];
+        //            // left-most point is (xminPixel, ypixel)
+        //            // middle point is (xpixel, ypixel)
+        //            xVertex[0].position = Vector2f(0, ypixel);
+        //            xVertex[0].color = Color::White;
+        //            xAxis.append(xVertex[0]);
+        //            xVertex[1].position = Vector2f(xpixel, ypixel);
+        //            xVertex[1].color = Color::White;
+        //            xAxis.append(xVertex[1]);
+        //            xVertex[2].position = Vector2f(GRAPH_PANEL, ypixel);
+        //            xVertex[2].color = Color::White;
+        //            xAxis.append(xVertex[2]);
+        //        }
+        //store pixel location inside a vertex
         Vertex vertex;
-        
         vertex.position = Vector2f(xpixel, ypixel);
-        vertex.color = Color(255, 150, 0); // orange color
-        
-        //Push x and y pixel as vector2f to xyCoords;
+        // make the graph orange color
+        vertex.color = Color(255, 150, 0);
+        // append the vertex to xyCoords;
         xyCoords.append(vertex);
     }
 }
+
+void Equation::Draw(sf::RenderWindow& window)
+{
+    window.draw(xAxis);
+    window.draw(xyCoords);
+}
+

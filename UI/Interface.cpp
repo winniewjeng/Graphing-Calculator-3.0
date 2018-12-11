@@ -2,19 +2,21 @@
 
 #include "Interface.hpp"
 
-// Interface contains god
-Interface::Interface(): sidebar(GRAPH_PANEL, SIDE_BAR), graph() {
+Interface::Interface(): sidebar(), graph() {
     
     window.create(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Graphing Calculator");
     
     window.setFramerateLimit(60);
+    cout << GRAPH_PANEL << " X " << WINDOW_HEIGHT << endl;
     
     xmin = -4;
     xmax = 4;
     ymin = -4;
     ymax = 4;
     
+    //   graph.getAxes(xmin, xmax, ymin, ymax);
     equation.getCoords(xmin, xmax, ymin, ymax);
+
 }
 
 // process events/render
