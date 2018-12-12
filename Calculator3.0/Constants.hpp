@@ -19,4 +19,7 @@ const float WINDOW_HEIGHT = 1350;
 const float GRAPH_PANEL = WINDOW_WIDTH*2.8/5;
 const float SIDE_BAR = WINDOW_WIDTH*2.2/5;
 
+const int PANRIGHT = 6;
+const int PANLEFT = 7;
+
 #endif /* Constants_hpp */

@@ -22,19 +22,38 @@ class Equation {
     
 public:
     // CTOR -- initializes Shunting yard object, postfix_queue of token queue, & xyCoords of vertex array as LinesStrip primitive type
-    Equation() : yard(), postfix_queue(yard.getRPN()) {
+//    Equation() : yard(), postfix_queue(yard.getRPN()) {
+//        xyCoords.setPrimitiveType(LinesStrip);
+//        xAxis.setPrimitiveType(LinesStrip);
+//        yAxis.setPrimitiveType(LinesStrip);
+////        _graphDrawn = false;
+//
+//        infix_expression = yard.getExpression();
+//    }
+    Equation(double xmin, double xmax, double grids) : yard(),
+    postfix_queue(yard.getRPN()),_xmin(xmin), _xmax(xmax), _grids(grids) {
         xyCoords.setPrimitiveType(LinesStrip);
         xAxis.setPrimitiveType(LinesStrip);
         yAxis.setPrimitiveType(LinesStrip);
-        _graphDrawn = false;
+        //        _graphDrawn = false;
+        
+        infix_expression = yard.getExpression();
     }
+    void step(int command);
     // get a set of coordinates given the xy-range
-    void getCoords(double xmin, double xmax, double grids);
+//    void getCoords(double xmin, double xmax, double grids);
+    void getCoords();
+
     void Draw(RenderWindow& window);
-    bool graphDrawn() {return _graphDrawn;}
+//    bool graphDrawn() {return _graphDrawn;}
     void getXAxis(double xpixel, double ypixel);
     void getYAxis(double xpixel, double ypixel);
-//    string get_expression() {return infix_expression;}
+    string get_expression() {return infix_expression;}
+    // set _xmin, _xmax, _grids
+    void setXmin(double xmin) {_xmin = xmin;}
+    void setXmax(double xmax) {_xmax = xmax;}
+    void setGrids(double grids) {_grids = grids;}
+    
     
 private:
 //    string infix_expression;
@@ -45,7 +64,12 @@ private:
     VertexArray xAxis;
     VertexArray yAxis;
     
-    bool _graphDrawn;
+    string infix_expression;
+    
+    double _xmin;
+    double _xmax;
+    double _grids;
+
 };
 
 #endif /* Equation_hpp */

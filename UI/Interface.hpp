@@ -17,6 +17,7 @@ public:
     
     Interface();
     void run();
+    void update();
     void processEvents();
     void render();
     void Draw();
@@ -34,6 +35,10 @@ private:
     Graph graph;
     Sidebar sidebar;
     Equation equation;
+    
+    string infix_expression;
+    
+    int command;
 };
 
 string mouse_pos_string(RenderWindow& window);

@@ -8,21 +8,35 @@
 
 #include "Equation.hpp"
 
-void Equation::getCoords(double xmin, double xmax, double grids) {
+void Equation::step(int command) {
+    
+    if (command == PANRIGHT) {
+        setXmin(_xmin + 1);
+        setXmax(_xmax + 1);
+        getCoords();
+    } else if (command == PANLEFT) {
+        setXmin(_xmin - 1);
+        setXmax(_xmax - 1);
+        getCoords();
+    }
+
+}
+
+void Equation::getCoords() {
     
     xyCoords.clear();
     
     cout << "Postfix: " << postfix_queue << endl;
     
-    double xrange = xmax - xmin;
+    double xrange = _xmax - _xmin;
     
     for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
         
-        double xval = xmin + (xpixel / GRAPH_PANEL) * xrange;
+        double xval = _xmin + (xpixel / GRAPH_PANEL) * xrange;
         // evaluate y
         double yval = yard.Eval(postfix_queue, xval);
         // get y pixel
-        double ypixel = (1 - (yval / grids * 2) ) * WINDOW_HEIGHT / 2;
+        double ypixel = (1 - (yval / _grids * 2) ) * WINDOW_HEIGHT / 2;
         //if yval == 0, use pixel to plot x-axis
         if (xval == 0) {
             getYAxis(xpixel, ypixel);
@@ -44,10 +58,11 @@ void Equation::getCoords(double xmin, double xmax, double grids) {
 
 void Equation::Draw(sf::RenderWindow& window)
 {
+    window.clear();
     window.draw(yAxis);
     window.draw(xAxis);
     window.draw(xyCoords);
-    _graphDrawn = true;
+//    _graphDrawn = true;
 }
 
 void Equation::getXAxis(double xpixel, double ypixel) {

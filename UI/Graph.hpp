@@ -18,6 +18,7 @@
 
 using namespace std;
 using namespace sf;
+
 class Graph {
 public:
     
@@ -25,7 +26,6 @@ public:
     void Draw(RenderWindow& widnow);
     
 private:
-    
     RectangleShape graph_window;
 };
 
