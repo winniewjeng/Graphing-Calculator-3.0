@@ -53,8 +53,14 @@ Queue<Token*> Shunting::toPostFix(Queue<Token*> infix) {
     
     Token* prev_item = new Operator("P");  // initialize prev_item to something ridiculous
     while (!infix.empty()) {
+        Token* item;
         //pop infix queue one item one at a time
-        Token* item = infix.pop();
+        try {
+            item = infix.pop();
+        } catch (Token*) {
+            cerr << "Error: cannot pop an empty queue";
+            exit(-1);
+        }
         // if the item is a number, push it to postfix
         if (item->get_type() == OPERAND) {
             postfix.push(item);
@@ -167,7 +173,14 @@ double Shunting::Eval(Queue<Token*> postfix, double var_num) {
     
     while (!postfix.empty()) {
         //get the top Token* in the postfix queue
-        Token* tok = postfix.pop();
+        Token* tok;
+        try {
+            tok = postfix.pop();
+        } catch (Token*) {
+            cerr << "Error: popping an empty postfix";
+            exit(-1);
+        }
+            
         if (tok->get_type() == VARIABLE) {
             //push var_num into the eval_stack in lieu of the variable token
             eval_stack.push(var_num);
@@ -184,8 +197,16 @@ double Shunting::Eval(Queue<Token*> postfix, double var_num) {
             
             //if operator is not trig, get a LHS and RHS from the eval stack
             if (optr->is_trig() == false) {
-                double RHS = eval_stack.pop();
-                double LHS = eval_stack.pop();
+                double RHS;
+                double LHS;
+                try {
+                    RHS = eval_stack.pop();
+                    LHS = eval_stack.pop();
+                } catch (node<double>*) {
+                    cerr << "Error: poping an empty double eval_stack in Shunting\n";
+                    exit(-1);
+                }
+                
                 result = optr->calculate(LHS, RHS);
             }
             // if operator is trig

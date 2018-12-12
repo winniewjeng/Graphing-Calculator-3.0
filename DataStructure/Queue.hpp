@@ -91,13 +91,24 @@ public:
     //pop items from the front
     
     T pop() {
+        
+        if (top() == nullptr) {
+            throw top();
+            exit(-1);
+        }
+        
         // cannot pop an empty queue
         assert(!empty());
-        
         //decrement the queue size
         size--;
         // hold the item front of the queue and delete front
-        T hold = delete_head(front);
+        T hold;
+        try {
+            hold = delete_head(front);
+        } catch (node<T>*) {
+            cerr << "Error: popping an empty queue";
+            exit(-1);
+        }
                 // reset rear to the last element
         rear = LastNode(front);
         

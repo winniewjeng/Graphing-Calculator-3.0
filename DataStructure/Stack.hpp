@@ -29,7 +29,6 @@ public:
         
         if (stack.Begin() == nullptr) {
             throw stack.Begin();
-            exit(-1);
         }
         
         assert (stack.Begin()!=nullptr);

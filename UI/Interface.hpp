@@ -25,7 +25,6 @@ private:
     
     bool mouseIn;
     Cursor cursor;
-//    CircleShape mousePoint;
     
     float xmin;
     float xmax;
@@ -39,6 +38,4 @@ private:
 
 string mouse_pos_string(RenderWindow& window);
 string userinput(RenderWindow& window);
-string key_to_string(RenderWindow& window);
-
 #endif /* Interface_hpp */

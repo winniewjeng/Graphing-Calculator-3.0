@@ -176,8 +176,12 @@ T delete_head(node<T>*& head_ptr) {
     assert(head_ptr != nullptr);
     T hold_this = head_ptr->_item;
     node<T>* temp = head_ptr;
-    head_ptr = head_ptr->_next;
-    delete temp;
+    
+    if (temp != head_ptr) {
+        throw temp;
+    }
+    head_ptr = head_ptr->_next;    
+//    delete temp;
     
     return hold_this;
 }

@@ -21,18 +21,15 @@ void Equation::getCoords(double xmin, double xmax, double grids) {
         double xval = xmin + (xpixel / GRAPH_PANEL) * xrange;
         // evaluate y
         double yval = yard.Eval(postfix_queue, xval);
-
         // get y pixel
         double ypixel = (1 - (yval / grids * 2) ) * WINDOW_HEIGHT / 2;
-
-////        //if yval == 0, use pixel to plot x-axis
+        //if yval == 0, use pixel to plot x-axis
         if (xval == 0) {
             getYAxis(xpixel, ypixel);
         }
         if (yval == 0) {
             getXAxis(xpixel, ypixel);
         }
-        
         //store pixel location inside a vertex
         Vertex vertex;
         vertex.position = Vector2f(xpixel, ypixel);

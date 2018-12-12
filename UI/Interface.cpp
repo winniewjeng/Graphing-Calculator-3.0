@@ -77,24 +77,6 @@ void Interface::processEvents() {
                 }
                 break;
                 
-                //                case::Event::MouseButtonReleased:
-                //                mouseX = event.mouseButton.x;
-                //                mouseY = event.mouseButton.y;
-                //                // if mouse is clicked inside bar, get user input and print eqn str
-                //                if (mouseX >= GRAPH_PANEL && mouseX <= WINDOW_WIDTH) {
-                //                    cout << "click\n";
-                //                } else {
-                //                    cout << "huh?\n";
-                //                }
-                //
-                //                if (event.mouseButton.button == Mouse::Right) {
-                //                    sidebar[5] = "RIGHT CLICK " + mouse_pos_string(window);
-                //                } else {
-                //                    sidebar[5] = "LEFT CLICK " +
-                //                    mouse_pos_string(window);
-                //                }
-                //                break;
-                
         }
         
     }
@@ -126,49 +108,4 @@ string mouse_pos_string(RenderWindow& window){
     ")";
 }
 
-string key_to_string(RenderWindow& window) {
-    string str = " | ";
-    if (Keyboard::isKeyPressed(Keyboard::Num0)) {
-        str += Keyboard::Num0;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num1)) {
-        str += Keyboard::Num1;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num2)) {
-        str += Keyboard::Num2;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num3)) {
-        str += Keyboard::Num3;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num4)) {
-        str += Keyboard::Num4;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num5)) {
-        str += Keyboard::Num5;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num6)) {
-        str += Keyboard::Num6;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num7)) {
-        str += Keyboard::Num7;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num8)) {
-        str += Keyboard::Num8;
-    } else if (Keyboard::isKeyPressed(Keyboard::Num9)) {
-        str += Keyboard::Num9;
-    } else if (Keyboard::isKeyPressed(Keyboard::Add)) {
-        str += Keyboard::Add;
-    } else if (Keyboard::isKeyPressed(Keyboard::Subtract)) {
-        str += Keyboard::Subtract;
-    } else if (Keyboard::isKeyPressed(Keyboard::Divide)) {
-        str += Keyboard::Divide;
-    } else if (Keyboard::isKeyPressed(Keyboard::Multiply)) {
-        str += Keyboard::Multiply;
-    } else if (Keyboard::isKeyPressed(Keyboard::Space)) {
-        str += Keyboard::Space;
-    } else if (Keyboard::isKeyPressed(Keyboard::Subtract)) {
-        str += Keyboard::Subtract;
-    } else if (Keyboard::isKeyPressed(Keyboard::Subtract)) {
-        str += Keyboard::Subtract;
-    } else if (Keyboard::isKeyPressed(Keyboard::Subtract)) {
-        str += Keyboard::Subtract;
-    }
-    //    } else if (Keyboard::isKeyPressed(Keyboard::)) {
-    //        str += Keyboard::Subtract;
-    //    }
-    
-    return str;
-}
 
