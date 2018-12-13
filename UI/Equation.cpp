@@ -27,12 +27,16 @@ void Equation::step(int command) {
         for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
             xyCoords[xpixel].position.y += 100;
         }
+        xAxis.clear();
+        getXAxis(xAxis[0].position.x, xAxis[0].position.y + 100);
         
     } else if (command == PANDOWN ) {
 
         for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
             xyCoords[xpixel].position.y -= 100;
         }
+        xAxis.clear();
+        getXAxis(xAxis[0].position.x, xAxis[0].position.y - 100);
         
     } else if (command == ZOOMIN) {
         
@@ -55,12 +59,13 @@ void Equation::step(int command) {
 void Equation::getCoords() {
     
     xyCoords.clear();
-    xAxis.clear();
-    yAxis.clear();
     //    cout << "Postfix: " << postfix_queue << endl;
     
     double xrange = _xmax - _xmin;
-    double last_yval;
+    //variables for tracking the xyAxes; initialized to sth ridiculous
+    double last_xval = 999;
+    double last_yval = 999;
+    double last_ypixel = 999;
     
     for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
         
@@ -71,18 +76,15 @@ void Equation::getCoords() {
         // get y pixel
         // # of _ypixel based on # of yval, which is based on # of xval
         _ypixel = (1 - (yval / _grids * 2) ) * WINDOW_HEIGHT / 2;
-//
-//        if (yval >= 0 && last_yval <=0) {
-//            Vertex xVertex[3];
-////            getXAxis(xpixel, _ypixel);
-//        }
-        // if yval == 0, use pixel to plot x-axis
-        //        if (xval == 0) {
-        //            getYAxis(xpixel, ypixel);
-        //        }
-        //        if (yval == 0) {
-        //            getXAxis(xpixel, ypixel);
-        //        }
+        
+        // if yOrigin detected, plot y axis at midway between last_xval and xval
+        if (last_xval <= 0 && xval >=0) {
+            getYAxis(xpixel-0.5, _ypixel);
+        }
+        // if xOrigin detected, plot x axis at midway between last_yval and yval
+        if (last_yval <=0 && yval >=0) {
+            getXAxis(xpixel, (_ypixel + last_ypixel) / 2);
+        }
         
         // store pixel location inside a vertex
         Vertex vertex;
@@ -93,7 +95,9 @@ void Equation::getCoords() {
         xyCoords.append(vertex);
         
         // get the last yval and current yval to see if plotting x-axis
+        last_xval = xval;
         last_yval = yval;
+        last_ypixel = _ypixel;
     }
 }
 
@@ -110,29 +114,31 @@ void Equation::Draw(sf::RenderWindow& window)
 }
 
 void Equation::getXAxis(double xpixel, double ypixel) {
+    xAxis.clear();
     Vertex xVertex[3];
     // left-most point is (xminPixel, ypixel)
     // middle point is (xpixel, ypixel)
     xVertex[0].position = Vector2f(0, ypixel);
-    xVertex[0].color = Color::Cyan;
+    xVertex[0].color = Color(200,200,200); //beige
     xAxis.append(xVertex[0]);
     xVertex[1].position = Vector2f(xpixel, ypixel);
-    xVertex[1].color = Color::White;
+    xVertex[1].color = Color(200,200,200);
     xAxis.append(xVertex[1]);
     xVertex[2].position = Vector2f(GRAPH_PANEL, ypixel);
-    xVertex[2].color = Color::Yellow;
+    xVertex[2].color = Color(200,200,200);
     xAxis.append(xVertex[2]);
 }
 
 void Equation::getYAxis(double xpixel, double ypixel) {
+    yAxis.clear();
     Vertex yVertex[3];
     yVertex[0].position = Vector2f(xpixel, 0);
-    yVertex[0].color = Color::Red;
+    yVertex[0].color = Color(200,200,200);
     yAxis.append(yVertex[0]);
     yVertex[1].position = Vector2f(xpixel, ypixel);
-    yVertex[1].color = Color::Green;
+    yVertex[1].color = Color(200,200,200);
     yAxis.append(yVertex[1]);
     yVertex[2].position = Vector2f(xpixel, WINDOW_HEIGHT);
-    yVertex[2].color = Color::Blue;
+    yVertex[2].color = Color(200,200,200);
     yAxis.append(yVertex[2]);
 }

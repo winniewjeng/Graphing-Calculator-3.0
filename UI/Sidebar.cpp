@@ -3,7 +3,7 @@
 
 
 Sidebar::Sidebar() {
-    // set the bar to gray color
+    // set the bar to beige color
     bar.setFillColor(Color(200,200,200));
     // sidebar align right
     bar.setPosition(Vector2f(GRAPH_PANEL, 0));

@@ -60,6 +60,7 @@ private:
     VertexArray xAxis;
     VertexArray yAxis;
     
+    
     string infix_expression;
     
     double _xmin;
