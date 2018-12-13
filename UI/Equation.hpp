@@ -29,6 +29,10 @@ public:
         yAxis.setPrimitiveType(LinesStrip);
 
         infix_expression = yard.getExpression();
+        
+        _background.setFillColor(Color(50, 50, 50));
+        _background.setPosition(0, 0); // align left
+        _background.setSize(Vector2f(GRAPH_PANEL, WINDOW_HEIGHT));
     }
     void step(int command);
     // get a set of coordinates given the xy-range
@@ -47,6 +51,7 @@ public:
     
     
 private:
+    RectangleShape _background;
 //    string infix_expression;
     Shunting yard;
     Queue<Token*> postfix_queue;

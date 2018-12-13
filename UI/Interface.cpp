@@ -2,8 +2,8 @@
 
 #include "Interface.hpp"
 
-Interface::Interface(): xmin(- 2 * 3.14), xmax(2 * 3.14), grids(7), sidebar(), graph(), equation(xmin, xmax, grids) {
-    
+Interface::Interface(): xmin(-4), xmax(4), grids(8), sidebar(), graph(), equation(xmin, xmax, grids){
+//    xmin(- 2 * 3.14), xmax(2 * 3.14), grids(8),
     window.create(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Graphing Calculator");
     
     window.setFramerateLimit(100);
