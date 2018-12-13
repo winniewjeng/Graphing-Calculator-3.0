@@ -21,15 +21,7 @@ using namespace sf;
 class Equation {
     
 public:
-    // CTOR -- initializes Shunting yard object, postfix_queue of token queue, & xyCoords of vertex array as LinesStrip primitive type
-//    Equation() : yard(), postfix_queue(yard.getRPN()) {
-//        xyCoords.setPrimitiveType(LinesStrip);
-//        xAxis.setPrimitiveType(LinesStrip);
-//        yAxis.setPrimitiveType(LinesStrip);
-////        _graphDrawn = false;
-//
-//        infix_expression = yard.getExpression();
-//    }
+
     Equation(double xmin, double xmax, double grids) : yard(),
     postfix_queue(yard.getRPN()),_xmin(xmin), _xmax(xmax), _grids(grids) {
         xyCoords.setPrimitiveType(LinesStrip);

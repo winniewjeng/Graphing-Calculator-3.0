@@ -17,8 +17,8 @@ void Equation::step(int command) {
         getCoords();
         
     } else if (command == PANLEFT) {
-        setXmin(_xmin + 1);
-        setXmax(_xmax + 1);
+        setXmin(_xmin - 1);
+        setXmax(_xmax - 1);
         getCoords();
         
     } else if (command == PANUP) {
