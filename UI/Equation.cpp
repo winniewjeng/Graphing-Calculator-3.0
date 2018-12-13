@@ -17,8 +17,32 @@ void Equation::step(int command) {
         getCoords();
         
     } else if (command == PANLEFT) {
-        setXmin(_xmin - 1);
-        setXmax(_xmax - 1);
+        setXmin(_xmin + 1);
+        setXmax(_xmax + 1);
+        getCoords();
+        
+    } else if (command == PANUP) {
+        
+        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
+            xyCoords[xpixel].position.y += 100;
+        }
+        
+    } else if (command == PANDOWN ) {
+        
+        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
+            xyCoords[xpixel].position.y -= 100;
+        }
+        
+    } else if (command == ZOOMIN) {
+        
+        setXmin(_xmin * 0.95);
+        setXmax(_xmax * 0.95);
+        getCoords();
+        
+    } else if (command == ZOOMOUT) {
+        
+        setXmin(_xmin * 1.05);
+        setXmax(_xmax * 1.05);
         getCoords();
         
     } else if (command == PANUP) {
@@ -72,7 +96,11 @@ void Equation::getCoords() {
         //        if (yval == 0) {
         //            getXAxis(xpixel, ypixel);
         //        }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> c85a548e4b2e77bec45eb4ac83677d80774b6343
         // store pixel location inside a vertex
         Vertex vertex;
         vertex.position = Vector2f(xpixel, _ypixel);
