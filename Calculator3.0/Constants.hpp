@@ -22,4 +22,10 @@ const float SIDE_BAR = WINDOW_WIDTH*2.2/5;
 const int PANRIGHT = 6;
 const int PANLEFT = 7;
 
+const int PANUP = 8;
+const int PANDOWN = 9;
+
+const int ZOOMIN = 10;
+const int ZOOMOUT = 11;
+
 #endif /* Constants_hpp */

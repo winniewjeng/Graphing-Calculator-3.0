@@ -13,11 +13,6 @@ Interface::Interface(): xmin(- 2 * 3.14), xmax(2 * 3.14), grids(7), sidebar(), g
     if (cursor.loadFromSystem(sf::Cursor::Hand))
         window.setMouseCursor(cursor);
     
-//    xmin = - 2 * 3.14 ;
-//    xmax = 2 * 3.14;
-//    //grid nums
-//    grids = 7;
-//
      // recently added
     equation.getCoords();
 //    equation.getCoords(xmin, xmax, grids);
@@ -71,6 +66,14 @@ void Interface::processEvents() {
                         break;
                         // user wants to pan up
                         // user wants to pan down
+                        // user wants to zoom in
+                    case::Keyboard::I:
+                        command = ZOOMIN;
+                        break;
+                    case::Keyboard::O:
+                        command = ZOOMOUT;
+                        break;
+                        // user wants to zoom out
                 }
             case Event::MouseEntered:
                 mouseIn = true;
