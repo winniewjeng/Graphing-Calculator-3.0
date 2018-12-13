@@ -35,8 +35,7 @@ public:
         xyCoords.setPrimitiveType(LinesStrip);
         xAxis.setPrimitiveType(LinesStrip);
         yAxis.setPrimitiveType(LinesStrip);
-        //        _graphDrawn = false;
-        
+
         infix_expression = yard.getExpression();
     }
     void step(int command);
@@ -69,6 +68,8 @@ private:
     double _xmin;
     double _xmax;
     double _grids;
+    
+    double _ypixel;
 
 };
 

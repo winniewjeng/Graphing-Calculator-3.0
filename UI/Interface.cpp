@@ -13,18 +13,13 @@ Interface::Interface(): xmin(- 2 * 3.14), xmax(2 * 3.14), grids(7), sidebar(), g
     if (cursor.loadFromSystem(sf::Cursor::Hand))
         window.setMouseCursor(cursor);
     
-//    xmin = - 2 * 3.14 ;
-//    xmax = 2 * 3.14;
-//    //grid nums
-//    grids = 7;
-//
      // recently added
     equation.getCoords();
-//    equation.getCoords(xmin, xmax, grids);
+    // equation.getCoords(xmin, xmax, grids);
     
     infix_expression = equation.get_expression();
     sidebar.set_infix_expression(infix_expression);
-    //    cout << infix_expression << endl;
+//     cout << infix_expression << endl;
     
 }
 
@@ -70,7 +65,21 @@ void Interface::processEvents() {
                         command = PANLEFT;
                         break;
                         // user wants to pan up
+                    case::Keyboard::Up:
+                        command = PANUP;
+                        break;
                         // user wants to pan down
+                    case::Keyboard::Down:
+                        command = PANDOWN;
+                        break;
+                        // user wants to zoom in
+                    case::Keyboard::I:
+                        command = ZOOMIN;
+                        break;
+                    case::Keyboard::O:
+                        command = ZOOMOUT;
+                        break;
+                        // user wants to zoom out
                 }
             case Event::MouseEntered:
                 mouseIn = true;
