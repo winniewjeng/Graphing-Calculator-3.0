@@ -1,7 +1,6 @@
 
 #include "Sidebar.hpp"
 
-
 Sidebar::Sidebar() {
     // set the bar to beige color
     bar.setFillColor(Color(200,200,200));

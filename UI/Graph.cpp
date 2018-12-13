@@ -8,6 +8,7 @@
 
 #include "Graph.hpp"
 
+// this class is pretty useless b/c Equation replaces it -- Repurpose or delete later
 Graph::Graph() {
     //set up the graph rectangle:
     graph_window.setFillColor(Color(50, 50, 50));

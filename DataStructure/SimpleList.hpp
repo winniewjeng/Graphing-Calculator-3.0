@@ -64,8 +64,6 @@ public:
         return::InsertSorted(head_ptr, item);
     }
     
-    
-    
     //delete node pointed to by iMarker
     
     T Delete(node<T>* iMarker) {
@@ -113,7 +111,6 @@ public:
         return LastNode(head_ptr);
     }
     
-    //NOT YET IMPLEMENTED
     //insertion operator for list
     
     template <class U>

@@ -12,6 +12,7 @@
 
 using namespace sf;
 
+// Interface class controls all the sub UI classes
 class Interface {
 public:
     
@@ -27,6 +28,7 @@ private:
     bool mouseIn;
     Cursor cursor;
     
+    // default values of the graph
     float xmin;
     float xmax;
     float grids;
@@ -36,6 +38,7 @@ private:
     Sidebar sidebar;
     Equation equation;
     
+    // user input function expression
     string infix_expression;
     
     int command;

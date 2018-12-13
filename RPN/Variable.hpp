@@ -3,6 +3,7 @@
 #define Variable_hpp
 #include <iostream>
 #include "Token.hpp"
+#include "Constants.hpp"
 
 class Token;
 
@@ -14,7 +15,7 @@ public:
     void print(ostream& outs = cout) const {
         outs << _var;
     }
-    int get_type() {return 2;}
+    int get_type() {return VARIABLE;}
     char get_var() {return _var;}
 private:
     char _var;

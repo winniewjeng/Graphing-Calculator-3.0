@@ -3,20 +3,21 @@
 #include "Interface.hpp"
 
 Interface::Interface(): xmin(-4), xmax(4), grids(8), sidebar(), graph(), equation(xmin, xmax, grids){
+    // some default values I can set the graph to
 //    xmin(- 2 * 3.14), xmax(2 * 3.14), grids(8),
     window.create(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Graphing Calculator");
     
     window.setFramerateLimit(100);
     
+    // Change mouse type depending on where it is in window -- default to true
     mouseIn = true;
-    
     if (cursor.loadFromSystem(sf::Cursor::Hand))
         window.setMouseCursor(cursor);
     
-     // recently added
+    // initialize equaiton memeber variable and plot
     equation.getCoords();
-    // equation.getCoords(xmin, xmax, grids);
     
+    // set the user define string function and print it on sidebar
     infix_expression = equation.get_expression();
     sidebar.set_infix_expression(infix_expression);
 //     cout << infix_expression << endl;
@@ -110,19 +111,11 @@ void Interface::processEvents() {
     }
 }
 
+// update the graph -- check equation step
 void Interface::update(){
     //cause changes to the data for the next frame
     equation.step(command);
     command = 0;
-    
-    //    if (mouseIn){
-    //        //mousePoint red dot:
-    //        mousePoint.setPosition(sf::Mouse::getPosition(window).x-5,
-    //                               sf::Mouse::getPosition(window).y-5);
-    //
-    //        //mouse location text for sidebar:
-    //        sidebar[SB_MOUSE_POSITION] = mouse_pos_string(window);
-    //    }
 }
 
 //clear/draw/display
@@ -142,13 +135,3 @@ void Interface::Draw() {
     sidebar.draw(window);
     
 }
-
-string mouse_pos_string(RenderWindow& window){
-    return "(" +
-    to_string(Mouse::getPosition(window).x) +
-    ", " +
-    to_string(Mouse::getPosition(window).y) +
-    ")";
-}
-
-

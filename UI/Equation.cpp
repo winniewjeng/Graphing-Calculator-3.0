@@ -8,6 +8,7 @@
 
 #include "Equation.hpp"
 
+// Interface update() calls step to make necessary changes in user pan or zoom situation
 void Equation::step(int command) {
     
     if (command == PANRIGHT) {
@@ -55,9 +56,7 @@ void Equation::step(int command) {
         setXmax(_xmax * 0.95);
         SCALE *= 1.05;
         getCoords();
-//        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
-//        }
-//
+
     } else if (command == ZOOMOUT) {
         
         setXmin(_xmin * 1.05);
@@ -68,13 +67,15 @@ void Equation::step(int command) {
     
 }
 
+// The function transforms (x, y) and plot them as (pixelX, pixelY) on window
 void Equation::getCoords() {
     
+    // clear the xyCoords VertexArray
     xyCoords.clear();
-    //    cout << "Postfix: " << postfix_queue << endl;
+    // cout << "Postfix: " << postfix_queue << endl;
     
     double xrange = _xmax - _xmin;
-    //variables for tracking the xyAxes; initialized to sth ridiculous
+    //variables for tracking the xy-Axes; initialized to somehting ridiculous
     double last_xval = 999;
     double last_yval = 999;
     double last_ypixel = 999;
@@ -82,11 +83,12 @@ void Equation::getCoords() {
     for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
         
         double xval = _xmin + (xpixel / GRAPH_PANEL) * xrange;
-        // evaluate y
+        // get y by calling the shunting yard Eval funciton
         double yval = yard.Eval(postfix_queue, xval)*SCALE;
+        
         //        cout << "x: " << xval << "   y: " << yval << endl;
-        // get y pixel
-        // # of _ypixel based on # of yval, which is based on # of xval
+        
+        // get y pixel -- # of _ypixel based on # of yval, which is based on # of xval
         _ypixel = (1 - (yval / _grids * 2) ) * WINDOW_HEIGHT / 2;
         
         // if yOrigin detected, plot y axis at midway between last_xval and xval
@@ -122,9 +124,9 @@ void Equation::Draw(sf::RenderWindow& window)
     window.draw(yAxis);
     window.draw(xAxis);
     window.draw(xyCoords);
-    //    _graphDrawn = true;
 }
 
+// plot x Axis
 void Equation::getXAxis(double xpixel, double ypixel) {
     xAxis.clear();
     Vertex xVertex[3];
@@ -141,6 +143,7 @@ void Equation::getXAxis(double xpixel, double ypixel) {
     xAxis.append(xVertex[2]);
 }
 
+// plot y axis
 void Equation::getYAxis(double xpixel, double ypixel) {
     yAxis.clear();
     Vertex yVertex[3];

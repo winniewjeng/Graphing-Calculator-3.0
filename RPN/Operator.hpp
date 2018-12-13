@@ -3,6 +3,7 @@
 #define Operator_hpp
 #include <iostream>
 #include "Token.hpp"
+#include "Constants.hpp"
 #include <cmath>
 
 using namespace std;
@@ -13,11 +14,14 @@ class Operator : public Token {
     
 public:
     Operator(string symb): _symb(symb) {}
+    
     void print(ostream& outs = cout) const {
         outs << _symb;
     }
-    int get_type() {return 0;}
     
+    int get_type() {return OPERATOR;}
+    
+    // called by Eval function to perform calculation
     double calculate(double LHS, double RHS) {
         if (_symb == "+") {
             return (LHS + RHS);
@@ -38,6 +42,7 @@ public:
         return -1;
     }
     
+    // overloaded calculate to handle trig functions
     double calculate(double rad) {
         if (_symb == "sin") {
             return (sin(rad));
@@ -65,6 +70,7 @@ public:
         return 5;
     }
     
+    // called by toPostfix function to check Operator id
     bool is_trig() {
         if (_symb == "sin") {
             return true;

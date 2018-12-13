@@ -18,11 +18,13 @@ public:
     // CTOR -- set up the sidebar rectangle
     Sidebar();
     void draw(RenderWindow& window);
-    // NOT YET IMPLEMENTED
+    // overload operator to access UI icon vector
+    // interactive design not yet implemented
     string& operator [](int index);
-//    void eqn_str(string infix_expression) {_infix_expression = infix_expression;}
-    void set_infix_expression(string infix_expression);
     void store_symbol_icons();
+    // get the user input function string and draw in sidebar
+    void set_infix_expression(string infix_expression);
+    
 private:
     
     RectangleShape bar; //sidebar rectangle

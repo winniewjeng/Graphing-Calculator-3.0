@@ -18,7 +18,6 @@ struct node {
         _item = item;
         _next = next;
     }
-    
 };
 
 //IMPLEMENTED
