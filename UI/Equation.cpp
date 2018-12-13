@@ -15,12 +15,23 @@ void Equation::step(int command) {
         setXmin(_xmin + 1);
         setXmax(_xmax + 1);
         getCoords();
+//        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
+////            xyCoords[xpixel].position.x -= 100;
+//        }
+//        yAxis.clear();
+//        getYAxis(yAxis[0].position.x - 100, yAxis[0].position.y);
         
     } else if (command == PANLEFT) {
         
         setXmin(_xmin - 1);
         setXmax(_xmax - 1);
         getCoords();
+//        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
+//            xyCoords[xpixel].position.x += 100;tan ( X + 3 )
+//        }
+//        yAxis.clear();
+//        getYAxis(yAxis[0].position.x + 100, yAxis[0].position.y);
+//
         
     } else if (command == PANUP) {
         
@@ -30,7 +41,7 @@ void Equation::step(int command) {
         xAxis.clear();
         getXAxis(xAxis[0].position.x, xAxis[0].position.y + 100);
         
-    } else if (command == PANDOWN ) {
+    } else if (command == PANDOWN) {
 
         for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
             xyCoords[xpixel].position.y -= 100;
@@ -42,7 +53,7 @@ void Equation::step(int command) {
         
         setXmin(_xmin * 0.95);
         setXmax(_xmax * 0.95);
-        SCALE*=1.05;
+        SCALE *= 1.05;
         getCoords();
 //        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
 //        }
