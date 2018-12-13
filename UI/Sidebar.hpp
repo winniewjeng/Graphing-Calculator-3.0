@@ -2,7 +2,7 @@
 #ifndef Sidebar_hpp
 #define Sidebar_hpp
 
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include <iostream>
 #include <string>
 #include <vector>

@@ -38,11 +38,11 @@ void Sidebar::draw(RenderWindow& window) {
     // draw the string
     const double VERTICAL_LINE_SPACING = 0.5;
     const double LEFT_MARGIN = GRAPH_PANEL + 10.0; //1350
-    const double HORIZONTAL_LINE_SPACING = 0.5;
+//    const double HORIZONTAL_LINE_SPACING = 0.5;
     
     float height = 50;
-    float width = 20;
-    float align = LEFT_MARGIN;
+//    float width = 20;
+//    float align = LEFT_MARGIN;
     
     expression_text.setPosition(Vector2f(LEFT_MARGIN, height));
     height += expression_text.getLocalBounds().height + VERTICAL_LINE_SPACING;

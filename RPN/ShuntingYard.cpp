@@ -2,7 +2,7 @@
 #include "ShuntingYard.hpp"
 
 void Shunting::userInput() {
-    cout << "Enter an expression, i.e. 4 sin ( tan ( X + 3 ) )\n";
+    cout << "Enter an expression, i.e. [5 + X * 2], [sin ( X + 3 )], [X ^ 23.4], [X * sin ( X / 2 )]\n";
     cout << "My expression: ";
     getline(cin, _expression);
 }
