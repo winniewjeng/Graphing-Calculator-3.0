@@ -65,7 +65,13 @@ void Interface::processEvents() {
                         command = PANLEFT;
                         break;
                         // user wants to pan up
+                    case::Keyboard::Up:
+                        command = PANUP;
+                        break;
                         // user wants to pan down
+                    case::Keyboard::Down:
+                        command = PANDOWN;
+                        break;
                         // user wants to zoom in
                     case::Keyboard::I:
                         command = ZOOMIN;
