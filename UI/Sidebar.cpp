@@ -49,32 +49,31 @@ void Sidebar::draw(RenderWindow& window) {
     height += expression_text.getLocalBounds().height + VERTICAL_LINE_SPACING;
     window.draw(expression_text);
     
-    store_symbol_icons();
-    
-    int index = 0;
-    
+//    store_symbol_icons();
+//    int index = 0;
+//
 //    if (icons[index]  == "boop") {
 //        cout << "hey!" << endl;
 //    } else {
 //        cout << "noo!" << endl;
 //    }
     
-    while (icons[index] != "boop") {
-        
-        symbol_icon.setString(icons[index]);
-        
-        if (index % 3 == 0) {
-            symbol_icon.setPosition(Vector2f(align, height));
-        } else {
-            symbol_icon.setPosition(Vector2f(width, height));
-        }
-        
-        width += width;
-        
-        
-        window.draw(symbol_icon);
-        index++;
-    }
+//    while (icons[index] != "boop") {
+//
+//        symbol_icon.setString(icons[index]);
+//
+//        if (index % 3 == 0) {
+//            symbol_icon.setPosition(Vector2f(align, height));
+//        } else {
+//            symbol_icon.setPosition(Vector2f(width, height));
+//        }
+    
+//        width += width;
+    
+//        
+//        window.draw(symbol_icon);
+//        index++;
+//    }
     
 }
 

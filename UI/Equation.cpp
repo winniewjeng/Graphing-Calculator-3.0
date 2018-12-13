@@ -42,6 +42,7 @@ void Equation::step(int command) {
         
         setXmin(_xmin * 0.95);
         setXmax(_xmax * 0.95);
+        SCALE*=1.05;
         getCoords();
 //        for (double xpixel = 0; xpixel <= GRAPH_PANEL; xpixel++) {
 //        }
@@ -51,7 +52,7 @@ void Equation::step(int command) {
         setXmin(_xmin * 1.05);
         setXmax(_xmax * 1.05);
         getCoords();
-        
+        SCALE*=0.95;
     }
     
 }
@@ -71,7 +72,7 @@ void Equation::getCoords() {
         
         double xval = _xmin + (xpixel / GRAPH_PANEL) * xrange;
         // evaluate y
-        double yval = yard.Eval(postfix_queue, xval);
+        double yval = yard.Eval(postfix_queue, xval)*SCALE;
         //        cout << "x: " << xval << "   y: " << yval << endl;
         // get y pixel
         // # of _ypixel based on # of yval, which is based on # of xval
@@ -79,7 +80,7 @@ void Equation::getCoords() {
         
         // if yOrigin detected, plot y axis at midway between last_xval and xval
         if (last_xval <= 0 && xval >=0) {
-            getYAxis(xpixel-0.5, _ypixel);
+            getYAxis(xpixel, _ypixel);
         }
         // if xOrigin detected, plot x axis at midway between last_yval and yval
         if (last_yval <=0 && yval >=0) {

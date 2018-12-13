@@ -68,7 +68,7 @@ private:
     double _grids;
     
     double _ypixel;
-
+    double SCALE = 1;
 };
 
 #endif /* Equation_hpp */
